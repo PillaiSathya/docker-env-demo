@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  greeter:
+    image: alpine
+    volumes:
+      - ./app:/app
+    working_dir: /app
+    entrypoint: [ "sh", "app.sh" ]
+    environment:
+      - USER_NAME=Sathya
+      - USER_ROLE=Docker Explorer
